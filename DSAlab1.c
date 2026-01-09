@@ -41,7 +41,7 @@ void read(struct calElement *calendar)
         calendar[i].date = date;
 
         printf("Enter description of the activity: ");
-        scanf(" %[^\n]", activity);
+        scanf(" %[^\n]", activity); // " %[^\n]" :- Reads full sentence including spaces and Stops when Enter is pressed
 
         calendar[i].activity = (char *)malloc(strlen(activity) + 1);
         strcpy(calendar[i].activity, activity);
@@ -82,3 +82,4 @@ int main()
     free(calendar);
     return 0;
 }
+
