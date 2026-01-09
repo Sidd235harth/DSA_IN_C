@@ -30,8 +30,9 @@ int precedence(char elem)
     case '*':
     case '/':
     case '%': return 3;
-    case '^':
-    case '$': return 4;
+    case '$':
+    case '^': return 4;
+   
     }
     return 0;
 }
@@ -74,3 +75,4 @@ int main()
     printf("Postfix Expression: %s\n", postfix);
     return 0;
 }
+
