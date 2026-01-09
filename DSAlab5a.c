@@ -15,8 +15,8 @@ int compute(char symbol, int op1, int op2)
     case '*': return op1 * op2;
     case '/': return op1 / op2;
     case '%': return op1 % op2;
-    case '^':
-    case '$': return pow(op1, op2);
+    case '$':
+    case '^': return pow(op1, op2);
     }
     return 0;
 }
@@ -48,3 +48,4 @@ int main()
     printf("Result = %d\n", s[top]);
     return 0;
 }
+
