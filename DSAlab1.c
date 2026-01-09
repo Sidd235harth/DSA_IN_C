@@ -31,7 +31,7 @@ void read(struct calElement *calendar)
     for(i = 0; i < 7; i++)
     {
         printf("\nEnter the day: ");
-        scanf("%s", day);
+        scanf("%s", day); // We do NOT use &day because day itself already represents an address.
 
         calendar[i].day = (char *)malloc(strlen(day) + 1);
         strcpy(calendar[i].day, day);
@@ -82,4 +82,5 @@ int main()
     free(calendar);
     return 0;
 }
+
 
